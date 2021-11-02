@@ -26,3 +26,20 @@ void ins_at_beg_dll(int num) {
         head = n;
     }
 }
+
+// inside at end
+void ins_at_end_dll(int  num) {
+    n = (struct node*)malloc(sizeof(struct node));
+    n -> data = num;
+    n -> next = NULL;
+    n -> prev = NULL;
+    if(head == NULL) {
+        head = n;
+        tail = n;
+    }else{
+        tail->next = n;
+        n->prev = tail;
+        tail = n;
+    }
+}
+
