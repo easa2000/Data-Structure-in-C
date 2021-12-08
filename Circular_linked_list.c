@@ -6,6 +6,7 @@
         struct node *next;
     }*head, *n, *t;
 
+    // insert at beginning
     void ins_at_beg_cll(int num)
     {
         n = (struct node*)malloc(sizeof(struct node));
@@ -30,6 +31,7 @@
 
     }
 
+    // insert at end
     void ins_end_cll(int num)
     {
         n = (struct node*)malloc(sizeof(struct node));
@@ -66,6 +68,7 @@
         }
     }
 
+// print all elements
 void print_all_elements(struct node *head) {
     struct node *current = head;
     if(head != NULL){
@@ -76,6 +79,7 @@ void print_all_elements(struct node *head) {
     }
 } 
 
+// delete beginning
 void del_beg_cll()
 {
     struct node *t1;
@@ -103,6 +107,7 @@ void del_end_cll()
     free(t);
 }
 
+// delete at middle
 void del_at_mid(int num)
 {
     struct node *tp;
@@ -116,6 +121,7 @@ void del_at_mid(int num)
     free(t);
 }
 
+// search given element
 bool search(struct node *head, int num)
 {
     struct node *current = head;
@@ -130,6 +136,7 @@ bool search(struct node *head, int num)
     }
 }
 
+// main function
 void main()
 {
     ins_at_beg_cll(12);
